@@ -1,0 +1,214 @@
+  /* -------------------------------
+    GLOBAL STYLES
+  --------------------------------*/
+  body {
+    background: linear-gradient(135deg, #eef2ff 0%, #f8fafc 100%);
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+  }
+
+  h1, h4 {
+    color: #1e293b;
+    font-weight: 700;
+  }
+
+  /* -------------------------------
+    NAVBAR
+  --------------------------------*/
+  .navbar {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  }
+
+  .navbar-brand {
+    color: #1e293b !important;
+    font-weight: 700;
+  }
+
+  .nav-link {
+    color: #374151 !important;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+
+  .nav-link:hover {
+    color: #FFDB58 !important;
+    font-size: 1.05rem;
+  }
+
+  .nav-link.active {
+    color: #000 !important;
+    font-weight: 700;
+  }
+
+  .btn-outline-dark {
+    border: 1.5px solid #111827;
+    color: #111827;
+    transition: all 0.25s ease-in-out;
+  }
+
+  .btn-outline-dark:hover {
+    background-color: #111827;
+    color: #FFDB58;
+    transform: scale(1.05);
+  }
+
+  #loginAsUserBtn {
+    border: 1.5px solid #111827;
+    color: #111827;
+    transition: all 0.25s ease-in-out;
+  }
+
+  #loginAsUserBtn:hover {
+    background-color: #111827;
+    color: #FFDB58;
+    transform: scale(1.05);
+  }
+
+  /* -------------------------------
+    CARD STYLING
+  --------------------------------*/
+  .app-card {
+    border-radius: 20px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+    padding: 2rem;
+    max-width: 1300px;
+    width: 100%;
+  }
+
+  .app-card:hover {
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+  }
+
+  .card {
+    border-radius: 1rem;
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ffffff;
+    overflow: hidden;
+  }
+
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  }
+
+  /* -------------------------------
+    FORM ELEMENTS
+  --------------------------------*/
+  .form-label {
+    font-weight: 600;
+    color: #1e293b;
+  }
+
+  .form-control {
+    border-radius: 8px;
+    border-color: #e2e8f0;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .form-control:focus {
+    border-color: #FFDB58;
+    box-shadow: 0 0 0 0.2rem rgba(255, 219, 88, 0.25);
+  }
+
+  .invalid-feedback {
+    display: none;
+  }
+
+  input.is-invalid ~ .invalid-feedback {
+    display: block;
+  }
+
+  /* -------------------------------
+    BUTTONS
+  --------------------------------*/
+  .btn-primary,
+  .btn-add {
+    background-color: #FFDB58;
+    border-color: #FFDB58;
+    border-radius: 8px;
+    color: #1e293b;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .btn-primary:hover,
+  .btn-add:hover {
+    background-color: #f2c94c;
+    border-color: #f2c94c;
+    color: #111827;
+    transform: translateY(-1px);
+  }
+
+  /* -------------------------------
+    TABLES
+  --------------------------------*/
+  .table {
+    border: none !important;
+    font-size: 0.95rem;
+  }
+
+  .table thead {
+    background-color: #f9fafb;
+    border-bottom: 2px solid #e5e7eb;
+  }
+
+  .table th {
+    font-weight: 600;
+    color: #374151;
+    border: none !important;
+  }
+
+  .table td {
+    color: #1e293b;
+    border: none !important;
+  }
+
+  .table-hover tbody tr:hover {
+    background-color: #fffbe6;
+    transition: background-color 0.2s ease;
+  }
+
+  /* Action Buttons inside Table */
+  .table .btn {
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+
+  /* -------------------------------
+    RESPONSIVE DESIGN
+  --------------------------------*/
+  @media (max-width: 768px) {
+    .app-card {
+      padding: 1.5rem;
+    }
+
+    .card-body {
+      padding: 1rem;
+    }
+
+    .table {
+      font-size: 0.85rem;
+    }
+  }
+/* Rental status badges (match brand yellow) */
+.badge-ongoing {
+  background-color: #FFDB58;
+  color: #1e293b;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-weight: 700;
+}
+
+.badge-returned {
+  background-color: #6b7280; /* cool gray */
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-weight: 700;
+}

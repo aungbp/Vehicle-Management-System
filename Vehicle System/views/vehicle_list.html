@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vehicle List</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold text-dark" href="../index.html">Management System</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Customers</a></li>
+          <li class="nav-item"><a class="nav-link" href="vehicles.html">Vehicles</a></li>
+          <li class="nav-item"><a class="nav-link" href="rental.html">Rentals</a></li>
+          <li class="nav-item"><a class="nav-link" href="reservation.html">Reservations</a></li>
+          <li class="nav-item"><a class="nav-link active" href="vehicle_list.html">Vehicle Search</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-2">
+          <span id="loggedUserName" class="fw-semibold text-dark me-2"></span>
+          <button id="logoutBtn" class="btn btn-outline-dark btn-sm">Logout</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- VEHICLE SEARCH SECTION -->
+  <div class="container py-5">
+    <h1 class="text-center mb-4 fw-bold">Vehicle Search</h1>
+
+    <input
+      type="text"
+      id="vehicleSearchInput"
+      class="form-control mb-4"
+      placeholder="Search by type, make, model, or location..."
+    />
+
+    <!-- Confirmation message -->
+    <div id="confirmationMessage" class="alert alert-success text-center" style="display:none;"></div>
+
+    <!-- Vehicle Cards -->
+    <div id="vehicleContainer" class="row g-4"></div>
+  </div>
+
+  <!-- Reservation Modal -->
+  <div class="modal fade" id="reservationModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Reserve Vehicle</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p id="modalVehicleName" class="fw-semibold"></p>
+          <div class="mb-3">
+            <label for="rentalDate" class="form-label">Rental Date</label>
+            <input type="date" id="rentalDate" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label for="returnDate" class="form-label">Return Date</label>
+            <input type="date" id="returnDate" class="form-control">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="confirmReservationBtn" class="btn btn-primary">Confirm</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS FILES -->
+  <script src="../js/models/vehicle_list_model.js"></script>
+  <script src="../js/models/reservation_model.js"></script>
+  <script src="../js/view/vehicle_list_view.js"></script>
+  <script src="../js/controller/vehicle_list_controller.js"></script>
+  <script src="../js/controller/session_controller.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
